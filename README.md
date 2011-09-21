@@ -1,6 +1,6 @@
 # ICheckMovies
 
-Get easy access to any public [ICheckMovies](http://www.icheckmovies.com/) [list](http://www.icheckmovies.com/movie/about+schmidt/history/the+best+1000+movies+ever+made/).
+Get easy access to any public [ICheckMovies](http://www.icheckmovies.com/) [list](http://www.icheckmovies.com/list/the+best+1000+movies+ever+made/).
 
 ## How to use
 
@@ -8,7 +8,7 @@ Get easy access to any public [ICheckMovies](http://www.icheckmovies.com/) [list
 
 ``` ruby
 require "icheckmovies"
-result = ICheckMovies.fetch("http://www.icheckmovies.com/movie/about+schmidt/history/the+best+1000+movies+ever+made/")
+result = ICheckMovies.fetch("http://www.icheckmovies.com/list/the+best+1000+movies+ever+made/")
 
 result.movies.count # => 1002
 result.movies.first.title # => À nous la liberté
