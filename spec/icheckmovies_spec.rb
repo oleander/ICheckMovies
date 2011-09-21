@@ -19,6 +19,7 @@ describe Icheckmovies do
       movie.title.should_not be_empty
       movie.year.should > 1800
       movie.details.should match(href_matcher)
+      movie.id.should match(/^tt\d{7}$/)
     end
   end
   
