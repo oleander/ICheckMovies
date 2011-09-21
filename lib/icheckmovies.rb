@@ -1,7 +1,7 @@
 require "nokogiri"
 require "rest-client"
 
-class Icheckmovies
+class ICheckMovies
   attr_reader :url
   
   def initialize(url)
@@ -10,7 +10,7 @@ class Icheckmovies
   end
   
   def self.fetch(url)
-    Icheckmovies.new(url)
+    ICheckMovies.new(url)
   end
   
   def movies

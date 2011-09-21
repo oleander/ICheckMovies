@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe Icheckmovies do
+describe ICheckMovies do
   use_vcr_cassette "the+best+1000+movies+ever+made"
   let(:href_matcher) { %r{^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$} }
   let(:url) { "http://www.icheckmovies.com/list/the+best+1000+movies+ever+made/" }
   
   before(:each) do
-    @check = Icheckmovies.fetch(url)
+    @check = ICheckMovies.fetch(url)
   end
   
   it "should have 1002 movies" do
