@@ -8,10 +8,11 @@ Get easy access to any public [ICheckMovies](http://www.icheckmovies.com/) [list
 
 ``` ruby
 require "icheckmovies"
-result = ICheckMovies.fetch("http://www.icheckmovies.com/list/the+best+1000+movies+ever+made/")
+check = ICheckMovies.fetch("http://www.icheckmovies.com/list/the+best+1000+movies+ever+made/")
 
-result.movies.count # => 1002
-result.movies.first.title # => À nous la liberté
+check.name # => The Best 1,000 Movies Ever Made
+check.movies.count # => 1002
+check.movies.first.title # => À nous la liberté
 ```
 
 ## Data to work with
