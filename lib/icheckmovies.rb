@@ -14,7 +14,7 @@ class ICheckMovies
   end
   
   def movies
-    content.css("li.movie").map do |movie|
+    @_movies ||= content.css("li.movie").map do |movie|
       @movie.new(
         movie.at_css("a.optionIMDB").attr("href"),
         movie.at_css("h2 a").content,

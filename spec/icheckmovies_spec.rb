@@ -30,4 +30,9 @@ describe ICheckMovies do
   it "should have a name" do
     @check.name.should eq("The Best 1,000 Movies Ever Made top movies")
   end
+  
+  it "should cache #movies" do
+    @check.instance_eval { @movie.should_receive(:new).exactly(1002).times }
+    2.times { @check.movies }
+  end
 end
