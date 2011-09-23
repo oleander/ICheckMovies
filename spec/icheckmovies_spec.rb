@@ -14,12 +14,14 @@ describe ICheckMovies do
   end
   
   it "should have some accessors" do
-    @check.movies.each do |movie|
+    @check.movies.each_with_index do |movie, index|
+      p movie
       movie.imdb_link.should match(%r{http://www.imdb.com/title/tt\d{7}/})
       movie.title.should_not be_empty
       movie.year.should > 1800
       movie.details.should match(href_matcher)
       movie.id.should match(/^tt\d{7}$/)
+      movie.order.should eq(index + 1)
     end
   end
   

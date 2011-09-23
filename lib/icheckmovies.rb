@@ -6,7 +6,7 @@ class ICheckMovies
   
   def initialize(url)
     @url = url
-    @movie = Struct.new(:imdb_link, :title, :year, :details, :id)
+    @movie = Struct.new(:imdb_link, :title, :year, :details, :id, :order)
   end
   
   def self.fetch(url)
@@ -20,7 +20,8 @@ class ICheckMovies
         movie.at_css("h2 a").content,
         movie.at_css(".year").content.to_i,
         "http://www.icheckmovies.com" + movie.at_css("a.dvdCoverSmall").attr("href"),
-        movie.at_css("a.optionIMDB").attr("href").match(/(tt\d{7})/).to_a[1]
+        movie.at_css("a.optionIMDB").attr("href").match(/(tt\d{7})/).to_a[1],
+        movie.at_css(".rank").content.to_i
       )
     end
   end
