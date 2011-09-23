@@ -32,7 +32,8 @@ The `movies` method returns a list of movies.
 - **title** (String) Movie title.
 - **year** (Fixnum) Release year.
 - **details** (String) Url to ICheckMovies detail page.
- 
+- **order** (Fixnum) Where is the movie?
+
 ## How do install
 
     [sudo] gem install icheckmovies
