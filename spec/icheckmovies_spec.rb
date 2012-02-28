@@ -29,7 +29,7 @@ describe ICheckMovies do
   end
   
   it "should have a name" do
-    @check.name.should eq("The Best 1,000 Movies Ever Made top movies")
+    @check.name.should eq("The Best 1,000 Movies Ever Made")
   end
   
   it "should cache #movies" do
